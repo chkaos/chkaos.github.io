@@ -48,7 +48,7 @@ function loadMainJs($, moment, ClipboardJS, config) {
         }
     }
     adjustNavbar();
-    $(window).resize(adjustNavbar);
+    $(window).resize(debounce(adjustNavbar, 200));
 
     function toggleFold(codeBlock, isFolded) {
         const $toggle = $(codeBlock).find('.fold i');

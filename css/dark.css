@@ -45,6 +45,10 @@
 .night hr {
   background-color: rgba(0,0,0,0.2);
 }
+.night .left-navbar-menu .navbar-item:hover {
+  background-color: #7a7a7a;
+  color: #3273dc;
+}
 .night .menu-list a:hover {
   background-color: #7a7a7a;
   color: #3273dc;
@@ -68,8 +72,8 @@
 .night .navbar-menu a:hover {
   color: #3273dc;
 }
-.night .post-copyright {
-  background-color: rgba(0,0,0,0.2);
+.night .article-post-copyright {
+  background-color: rgba(0,0,0,0.2) !important;
 }
 .night #back-to-top:hover {
   color: #3273dc;
@@ -198,7 +202,7 @@
 .night .timeline .media:before {
   background: rgba(219,219,219,0.439);
 }
-.night .post-copyright {
+.night .article-post-copyright {
   border-left: 3px solid rgba(255,23,0,0.439);
 }
 .night .button.is-light {
