@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>chkaos - Find the calm in chaos</title>
+  <icon>https://chkaos.top/icon.png</icon>
+  <subtitle>Find the calm in chaos</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://chkaos.top/"/>
+  <updated>2020-07-19T11:00:45.944Z</updated>
+  <id>https://chkaos.top/</id>
+  
+  <author>
+    <name>Chkaos</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MIT Challenge</title>
+    <link href="https://chkaos.top/posts/6cd4881c.html"/>
+    <id>https://chkaos.top/posts/6cd4881c.html</id>
+    <published>2020-07-19T08:22:24.000Z</published>
+    <updated>2020-07-19T11:00:45.944Z</updated>
+    
+    <summary type="html">
+    
+      野路子的自我救赎
+    
+    </summary>
+    
+    
+      <category term="思考" scheme="https://chkaos.top/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="MIT挑战" scheme="https://chkaos.top/tags/MIT%E6%8C%91%E6%88%98/"/>
+    
+      <category term="计算机科学" scheme="https://chkaos.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么我要写博客</title>
+    <link href="https://chkaos.top/posts/bfe2ba5b.html"/>
+    <id>https://chkaos.top/posts/bfe2ba5b.html</id>
+    <published>2020-07-12T07:30:00.000Z</published>
+    <updated>2020-07-19T09:52:38.357Z</updated>
+    
+    <summary type="html">
+    
+      第一篇博客，也是建站小记。I wish to confess.
+    
+    </summary>
+    
+    
+      <category term="思考" scheme="https://chkaos.top/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="建站小记" scheme="https://chkaos.top/tags/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>

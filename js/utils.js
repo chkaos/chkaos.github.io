@@ -76,6 +76,7 @@ function getDateDiff(dateTimeStamp) {
 }
 
 var expireTime1H = 1000 * 60 * 60; // 1小时过期
+
 function isNightRange(beginTime, endTime) {
   let nowDate = new Date();
   var nowTime = nowDate.getHours() + ":" + nowDate.getMinutes();

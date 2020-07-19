@@ -1,37 +1,50 @@
 .night {
   color: #c0c0c0 !important;
-  background-color: #202124;
+  background-color: $night-bg-color;
 }
 .night .aplayer .aplayer-miniswitcher {
   background: #c0c0c0 !important;
 }
 .night .navbar-highlight {
-  background-color: rgba(0,0,0,0.2) !important;
+  background-color: $night-color !important;
+}
+.night .content h1,
+.night h2,
+.night h3,
+.night h4 {
+  color: #c0c0c0;
+}
+.night .article-cover {
+  color: #fff;
+  background-color: $night-color !important;
+}
+.night .article-cover .content-title a {
+  color: #fff !important;
 }
 .night .content blockquote {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .button.is-light {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .tag:not(body) {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night strong {
   color: #fff;
 }
 .night .time-axis-achievement {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
   color: #fff;
 }
 .night .time-axis-title {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
   color: #fff;
 }
 .night .pagination .pagination-link:not(.is-current),
 .night .pagination .pagination-previous,
 .night .pagination .pagination-next {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .button.is-white {
   color: #fff;
@@ -43,43 +56,43 @@
   color: #fff;
 }
 .night hr {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .left-navbar-menu .navbar-item:hover {
-  background-color: #7a7a7a;
-  color: #3273dc;
+  background-color: $$night-color-hover;
+  color: $night-link;
 }
 .night .menu-list a:hover {
-  background-color: #7a7a7a;
-  color: #3273dc;
+  background-color: $$night-color-hover;
+  color: $night-link;
 }
 .night .menu-list a {
   color: #c0c0c0;
 }
 .night .level a:hover {
-  color: #3273dc !important;
+  color: $night-link !important;
 }
 .night .level .is-rounded:hover {
   color: #fff !important;
 }
 .night .level .level-item.is-marginless:hover {
-  background-color: rgba(0,0,0,0.2);
-  color: #3273dc;
+  background-color: $night-color;
+  color: $night-link;
 }
 .night .level .level-item.is-link:hover {
   color: #fff;
 }
 .night .navbar-menu a:hover {
-  color: #3273dc;
+  color: $night-link;
 }
 .night .article-post-copyright {
-  background-color: rgba(0,0,0,0.2) !important;
+  background-color: $night-color !important;
 }
 .night #back-to-top:hover {
-  color: #3273dc;
+  color: $night-link;
 }
 .night .tags.has-addons .tag:hover {
-  color: #3273dc;
+  color: $night-link;
 }
 .night input {
   background-color: #000;
@@ -88,14 +101,11 @@
 .night .card {
   color: #c0c0c0;
 }
-.night .card:hover {
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.8);
-}
 .night .has-text-grey {
   color: #c0c0c0 !important;
 }
 .night .has-link-black-ter {
-  color: #3273dc !important;
+  color: $night-link !important;
 }
 .night .has-link-grey.-link {
   color: #c0c0c0;
@@ -117,7 +127,7 @@
   color: #c0c0c0 !important;
 }
 .night .has-text-black-ter:hover {
-  color: #3273dc !important;
+  color: $night-link !important;
 }
 .night .navbar-item,
 .night .navbar-link {
@@ -127,45 +137,45 @@
   color: #c0c0c0;
 }
 .night .level-item.tag.is-danger {
-  background-color: #3273dc !important;
+  background-color: $night-link !important;
   color: #c0c0c0;
 }
 .night .friend-title-item {
   color: #c0c0c0;
 }
 .night .music-container #musiclist {
-  background: rgba(0,0,0,0.2);
+  background: $night-color;
 }
 .night .meplayer-container {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .navbar {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .card {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .footer {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .button.is-white {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .cardm {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .waifu-tips {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
   color: #c0c0c0;
 }
 .night .has-link-grey.-link:hover {
-  color: #3273dc !important;
+  color: $night-link !important;
 }
 .night .has-link-black-ter:hover {
-  color: #3273dc !important;
+  color: $night-link !important;
 }
 .night .timeline .media:last-child:after {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
 }
 .night .level-item.tag.is-danger,
 .night .button:not(.is-white),
@@ -229,7 +239,7 @@
   box-shadow: 0 0.625em 3.75em 0 #000;
 }
 .night textarea {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
   color: #fff;
 }
 .night .gt-container .gt-header-textarea:hover {
@@ -239,7 +249,7 @@
   background-color: #000;
 }
 .night .ins-section-container {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $night-color;
   color: #c0c0c0;
 }
 .night .searchbox-container,

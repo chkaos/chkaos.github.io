@@ -111,13 +111,6 @@ function loadBackTop() {
     lastScrollTop = $(window).scrollTop();
   }
 
-  // find the scroll direction
-  function scrollDirection(currentTop) {
-    var result = currentTop > lastScrollTop; // true is down & false is up
-    lastScrollTop = currentTop;
-    return result;
-  }
-
   function update() {
     var currentTop = getScrollTop();
 
@@ -147,19 +140,6 @@ function loadBackTop() {
 
       applyState(nextState);
 
-      var isDown = scrollDirection(currentTop);
-      if (currentTop > 56) {
-        if (isDown) {
-          if ($nav.hasClass("visible")) $nav.removeClass("visible");
-        } else {
-          if (!$nav.hasClass("visible")) $nav.addClass("visible");
-        }
-        $nav.addClass("fixed");
-      } else {
-        if (currentTop === 0) {
-          $nav.removeClass("fixed").removeClass("visible");
-        }
-      }
     } else {
       // mobile and tablet mode
       if (!isScrollUp()) {
