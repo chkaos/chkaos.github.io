@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2020-07-19T11:00:45.944Z</updated>
+  <updated>2020-08-19T17:24:17.698Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Theia 扫盲篇</title>
+    <link href="https://chkaos.top/posts/b8644cfb.html"/>
+    <id>https://chkaos.top/posts/b8644cfb.html</id>
+    <published>2020-08-19T16:25:46.000Z</published>
+    <updated>2020-08-19T17:24:17.698Z</updated>
+    
+    <summary type="html">
+    
+      目标 ：对 Eclipse Theia 框架技术有一个初步认识
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Theia" scheme="https://chkaos.top/tags/Theia/"/>
+    
+      <category term="VS Code" scheme="https://chkaos.top/tags/VS-Code/"/>
+    
+  </entry>
   
   <entry>
     <title>MIT Challenge</title>
