@@ -156,6 +156,10 @@ function loadBackTop() {
   $(window).scroll(throttle(update, 20));
 
   $("#back-to-top").on("click", () => {
-    $("body, html").animate({ scrollTop: 0 }, 400);
+    if (CSS && CSS.supports && CSS.supports('(scroll-behavior: smooth)')) {
+      window.scroll({ top: 0, behavior: 'smooth' });
+    } else {
+        $('body, html').animate({ scrollTop: 0 }, 400);
+    }
   });
 }

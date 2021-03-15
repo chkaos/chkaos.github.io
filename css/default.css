@@ -11034,8 +11034,7 @@ article.article .article-post-copyright {
     padding: 0.618rem;
   }
   .content .content-body {
-    width: 100%;
-    height: auto;
+    margin: 0 auto;
   }
   .content .content-body .description {
     height: auto;

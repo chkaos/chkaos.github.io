@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2020-10-21T16:35:51.853Z</updated>
+  <updated>2021-03-15T17:31:19.745Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -17,15 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>吹嘘录</title>
+    <link href="https://chkaos.top/posts/ade9e456.html"/>
+    <id>https://chkaos.top/posts/ade9e456.html</id>
+    <published>2021-03-14T08:52:00.000Z</published>
+    <updated>2021-03-15T17:31:19.745Z</updated>
+    
+    <summary type="html">
+    
+      吹牛也是一种艺术, Get your work recognized: write a brag document 翻译
+    
+    </summary>
+    
+    
+      <category term="职业发展" scheme="https://chkaos.top/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    
+    
+      <category term="面试" scheme="https://chkaos.top/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="代码以外" scheme="https://chkaos.top/tags/%E4%BB%A3%E7%A0%81%E4%BB%A5%E5%A4%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>常见排序算法总结</title>
     <link href="https://chkaos.top/posts/2812144.html"/>
     <id>https://chkaos.top/posts/2812144.html</id>
     <published>2020-10-21T16:31:00.000Z</published>
-    <updated>2020-10-21T16:35:51.853Z</updated>
+    <updated>2020-10-26T15:41:47.097Z</updated>
     
     <summary type="html">
     
-      常见排序算法的理解记录, Golang 实现
+      几种排序算法的理解与记录, Golang 实现
     
     </summary>
     
@@ -36,8 +59,6 @@
       <category term="算法" scheme="https://chkaos.top/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="排序" scheme="https://chkaos.top/tags/%E6%8E%92%E5%BA%8F/"/>
-    
-      <category term="冒泡排序" scheme="https://chkaos.top/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
@@ -69,7 +90,7 @@
     <link href="https://chkaos.top/posts/b8644cfb.html"/>
     <id>https://chkaos.top/posts/b8644cfb.html</id>
     <published>2020-08-19T16:25:46.000Z</published>
-    <updated>2020-08-19T17:24:17.698Z</updated>
+    <updated>2021-03-14T09:40:06.846Z</updated>
     
     <summary type="html">
     
@@ -92,7 +113,7 @@
     <link href="https://chkaos.top/posts/6cd4881c.html"/>
     <id>https://chkaos.top/posts/6cd4881c.html</id>
     <published>2020-07-19T08:22:24.000Z</published>
-    <updated>2020-08-29T14:25:49.079Z</updated>
+    <updated>2020-11-21T15:49:46.994Z</updated>
     
     <summary type="html">
     
