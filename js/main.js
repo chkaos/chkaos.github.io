@@ -48,7 +48,7 @@ function loadMainJs($, moment, ClipboardJS, config) {
         }
     }
     adjustNavbar();
-    $(window).resize(debounce(adjustNavbar, 200));
+    $(window).resize(adjustNavbar);
 
     function toggleFold(codeBlock, isFolded) {
         const $toggle = $(codeBlock).find('.fold i');
@@ -208,6 +208,4 @@ function loadMathJax() { //加载mathjax
 
 $(document).ready(function () {
     loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
-
-    console.info('%c CHKAOS %c ARE YOU OK?', 'background: #000; color: #fff; font-weight:900;font-size:24px','background: rgb(254,154,0); color: #000; font-weight:900;font-size:24px');
 });

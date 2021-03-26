@@ -33,7 +33,7 @@ function applyNight(value) {
 }
 
 function findNightIcon() {
-  nightNav = document.getElementById('btn-toggle-dark');
+  nightNav = document.getElementById('night-nav');
   nightIcon = document.getElementById('night-icon');
   if (!nightNav || !nightIcon) {
       setTimeout(findNightIcon, 100);

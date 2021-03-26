@@ -1,50 +1,37 @@
 .night {
   color: #c0c0c0 !important;
-  background-color: $night-bg-color;
+  background-color: #202124;
 }
 .night .aplayer .aplayer-miniswitcher {
   background: #c0c0c0 !important;
 }
 .night .navbar-highlight {
-  background-color: $night-color !important;
-}
-.night .content h1,
-.night h2,
-.night h3,
-.night h4 {
-  color: #c0c0c0;
-}
-.night .article-cover {
-  color: #fff;
-  background-color: $night-color !important;
-}
-.night .article-cover .content-title a {
-  color: #fff !important;
+  background-color: rgba(0,0,0,0.2) !important;
 }
 .night .content blockquote {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .button.is-light {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .tag:not(body) {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night strong {
   color: #fff;
 }
 .night .time-axis-achievement {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
   color: #fff;
 }
 .night .time-axis-title {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
   color: #fff;
 }
 .night .pagination .pagination-link:not(.is-current),
 .night .pagination .pagination-previous,
 .night .pagination .pagination-next {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .button.is-white {
   color: #fff;
@@ -56,43 +43,39 @@
   color: #fff;
 }
 .night hr {
-  background-color: $night-color;
-}
-.night .left-navbar-menu .navbar-item:hover {
-  background-color: $$night-color-hover;
-  color: $night-link;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .menu-list a:hover {
-  background-color: $$night-color-hover;
-  color: $night-link;
+  background-color: #7a7a7a;
+  color: #3273dc;
 }
 .night .menu-list a {
   color: #c0c0c0;
 }
 .night .level a:hover {
-  color: $night-link !important;
+  color: #3273dc !important;
 }
 .night .level .is-rounded:hover {
   color: #fff !important;
 }
 .night .level .level-item.is-marginless:hover {
-  background-color: $night-color;
-  color: $night-link;
+  background-color: rgba(0,0,0,0.2);
+  color: #3273dc;
 }
 .night .level .level-item.is-link:hover {
   color: #fff;
 }
 .night .navbar-menu a:hover {
-  color: $night-link;
+  color: #3273dc;
 }
-.night .article-post-copyright {
-  background-color: $night-color !important;
+.night .post-copyright {
+  background-color: rgba(0,0,0,0.2);
 }
 .night #back-to-top:hover {
-  color: $night-link;
+  color: #3273dc;
 }
 .night .tags.has-addons .tag:hover {
-  color: $night-link;
+  color: #3273dc;
 }
 .night input {
   background-color: #000;
@@ -101,11 +84,14 @@
 .night .card {
   color: #c0c0c0;
 }
+.night .card:hover {
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.8);
+}
 .night .has-text-grey {
   color: #c0c0c0 !important;
 }
 .night .has-link-black-ter {
-  color: $night-link !important;
+  color: #3273dc !important;
 }
 .night .has-link-grey.-link {
   color: #c0c0c0;
@@ -127,7 +113,7 @@
   color: #c0c0c0 !important;
 }
 .night .has-text-black-ter:hover {
-  color: $night-link !important;
+  color: #3273dc !important;
 }
 .night .navbar-item,
 .night .navbar-link {
@@ -137,45 +123,45 @@
   color: #c0c0c0;
 }
 .night .level-item.tag.is-danger {
-  background-color: $night-link !important;
+  background-color: #3273dc !important;
   color: #c0c0c0;
 }
 .night .friend-title-item {
   color: #c0c0c0;
 }
 .night .music-container #musiclist {
-  background: $night-color;
+  background: rgba(0,0,0,0.2);
 }
 .night .meplayer-container {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .navbar {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .card {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .footer {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .button.is-white {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .cardm {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .waifu-tips {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
   color: #c0c0c0;
 }
 .night .has-link-grey.-link:hover {
-  color: $night-link !important;
+  color: #3273dc !important;
 }
 .night .has-link-black-ter:hover {
-  color: $night-link !important;
+  color: #3273dc !important;
 }
 .night .timeline .media:last-child:after {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
 }
 .night .level-item.tag.is-danger,
 .night .button:not(.is-white),
@@ -212,7 +198,7 @@
 .night .timeline .media:before {
   background: rgba(219,219,219,0.439);
 }
-.night .article-post-copyright {
+.night .post-copyright {
   border-left: 3px solid rgba(255,23,0,0.439);
 }
 .night .button.is-light {
@@ -239,7 +225,7 @@
   box-shadow: 0 0.625em 3.75em 0 #000;
 }
 .night textarea {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
   color: #fff;
 }
 .night .gt-container .gt-header-textarea:hover {
@@ -249,7 +235,7 @@
   background-color: #000;
 }
 .night .ins-section-container {
-  background-color: $night-color;
+  background-color: rgba(0,0,0,0.2);
   color: #c0c0c0;
 }
 .night .searchbox-container,
