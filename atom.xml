@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-03-15T17:31:19.745Z</updated>
+  <updated>2021-03-26T13:48:52.783Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>浏览器同源策略</title>
+    <link href="https://chkaos.top/posts/7440f480.html"/>
+    <id>https://chkaos.top/posts/7440f480.html</id>
+    <published>2021-03-16T13:40:11.000Z</published>
+    <updated>2021-03-26T13:48:52.783Z</updated>
+    
+    <summary type="html">
+    
+      浏览器帮助阻隔恶意文档，减少可能被攻击的媒介的一种安全策略
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="浏览器" scheme="https://chkaos.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="同源策略" scheme="https://chkaos.top/tags/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>吹嘘录</title>
     <link href="https://chkaos.top/posts/ade9e456.html"/>
     <id>https://chkaos.top/posts/ade9e456.html</id>
     <published>2021-03-14T08:52:00.000Z</published>
-    <updated>2021-03-15T17:31:19.745Z</updated>
+    <updated>2021-03-26T13:47:32.189Z</updated>
     
     <summary type="html">
     
