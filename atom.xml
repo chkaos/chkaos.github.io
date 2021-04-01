@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-03-26T13:58:34.502Z</updated>
+  <updated>2021-04-01T09:36:38.264Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -17,11 +17,76 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>内存管理及4种常见的内存泄漏处理</title>
+    <link href="https://chkaos.top/posts/503970b4.html"/>
+    <id>https://chkaos.top/posts/503970b4.html</id>
+    <published>2021-04-01T09:21:41.000Z</published>
+    <updated>2021-04-01T09:36:38.264Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第三章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>V8 引擎探索及编写最优代码的5个技巧</title>
+    <link href="https://chkaos.top/posts/84794ca2.html"/>
+    <id>https://chkaos.top/posts/84794ca2.html</id>
+    <published>2021-04-01T09:11:46.000Z</published>
+    <updated>2021-04-01T09:17:38.851Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+      <category term="Google Chrome V8" scheme="https://chkaos.top/tags/Google-Chrome-V8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS引擎，运行时及调用栈概述</title>
+    <link href="https://chkaos.top/posts/503970b4.html"/>
+    <id>https://chkaos.top/posts/503970b4.html</id>
+    <published>2021-03-31T10:46:01.000Z</published>
+    <updated>2021-04-01T09:21:12.387Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第一章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>浏览器同源策略</title>
     <link href="https://chkaos.top/posts/7440f480.html"/>
     <id>https://chkaos.top/posts/7440f480.html</id>
     <published>2021-03-16T13:40:11.000Z</published>
-    <updated>2021-03-26T13:58:34.502Z</updated>
+    <updated>2021-04-01T08:46:56.536Z</updated>
     
     <summary type="html">
     
@@ -44,11 +109,11 @@
     <link href="https://chkaos.top/posts/ade9e456.html"/>
     <id>https://chkaos.top/posts/ade9e456.html</id>
     <published>2021-03-14T08:52:00.000Z</published>
-    <updated>2021-03-26T13:58:34.490Z</updated>
+    <updated>2021-04-01T08:30:46.737Z</updated>
     
     <summary type="html">
     
-      吹牛也是一种艺术, Get your work recognized: write a brag document 翻译
+      工作内容记录, Get your work recognized: write a brag document 翻译
     
     </summary>
     
@@ -67,7 +132,7 @@
     <link href="https://chkaos.top/posts/2812144.html"/>
     <id>https://chkaos.top/posts/2812144.html</id>
     <published>2020-10-21T16:31:00.000Z</published>
-    <updated>2021-03-26T13:58:34.500Z</updated>
+    <updated>2021-04-01T08:31:52.973Z</updated>
     
     <summary type="html">
     
@@ -90,7 +155,7 @@
     <link href="https://chkaos.top/posts/c84bd824.html"/>
     <id>https://chkaos.top/posts/c84bd824.html</id>
     <published>2020-08-29T08:22:00.000Z</published>
-    <updated>2021-03-26T13:58:34.457Z</updated>
+    <updated>2021-04-01T08:32:01.401Z</updated>
     
     <summary type="html">
     
@@ -113,7 +178,7 @@
     <link href="https://chkaos.top/posts/b8644cfb.html"/>
     <id>https://chkaos.top/posts/b8644cfb.html</id>
     <published>2020-08-19T16:25:46.000Z</published>
-    <updated>2021-03-26T13:58:34.475Z</updated>
+    <updated>2021-04-01T08:32:11.966Z</updated>
     
     <summary type="html">
     
