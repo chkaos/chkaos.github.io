@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-01T09:36:38.264Z</updated>
+  <updated>2021-04-03T17:10:31.610Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>事件循环及异步编程</title>
+    <link href="https://chkaos.top/posts/efa9d1a1.html"/>
+    <id>https://chkaos.top/posts/efa9d1a1.html</id>
+    <published>2021-04-03T09:21:41.000Z</published>
+    <updated>2021-04-03T17:10:31.610Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第四章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>内存管理及4种常见的内存泄漏处理</title>

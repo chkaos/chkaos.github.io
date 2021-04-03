@@ -11663,12 +11663,6 @@ figure.highlight .section {
   .column-left {
     max-width: 20%;
   }
-  .left-navbar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: calc(1.125rem + 58px);
-    z-index: 99;
-  }
 }
 @media screen and (min-width: 1408px) {
   .is-3-column .container,
@@ -11687,7 +11681,7 @@ figure.highlight .section {
   .is-sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: calc(1.125rem + 58px);
+    top: calc(1.125rem - 0.375rem + 58px);
     z-index: 99;
   }
   .column-main.is-sticky,
