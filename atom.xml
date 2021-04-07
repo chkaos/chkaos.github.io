@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-03T17:10:31.610Z</updated>
+  <updated>2021-04-07T07:12:06.028Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebAssembly 对比 JavaScript 及其使用场景</title>
+    <link href="https://chkaos.top/posts/6f537ab8.html"/>
+    <id>https://chkaos.top/posts/6f537ab8.html</id>
+    <published>2021-04-07T06:33:13.000Z</published>
+    <updated>2021-04-07T07:12:06.028Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第六章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="WebAssembly" scheme="https://chkaos.top/tags/WebAssembly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解WebSockets与带SSE机制的HTTP/2</title>
+    <link href="https://chkaos.top/posts/c28fa542.html"/>
+    <id>https://chkaos.top/posts/c28fa542.html</id>
+    <published>2021-04-04T09:21:41.000Z</published>
+    <updated>2021-04-04T16:57:50.081Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第五章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+      <category term="网络" scheme="https://chkaos.top/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>事件循环及异步编程</title>
@@ -39,10 +83,10 @@
   
   <entry>
     <title>内存管理及4种常见的内存泄漏处理</title>
-    <link href="https://chkaos.top/posts/503970b4.html"/>
-    <id>https://chkaos.top/posts/503970b4.html</id>
+    <link href="https://chkaos.top/posts/5ba3987d.html"/>
+    <id>https://chkaos.top/posts/5ba3987d.html</id>
     <published>2021-04-01T09:21:41.000Z</published>
-    <updated>2021-04-01T09:36:38.264Z</updated>
+    <updated>2021-04-07T07:12:23.569Z</updated>
     
     <summary type="html">
     
@@ -153,7 +197,7 @@
     <link href="https://chkaos.top/posts/2812144.html"/>
     <id>https://chkaos.top/posts/2812144.html</id>
     <published>2020-10-21T16:31:00.000Z</published>
-    <updated>2021-04-01T08:31:52.973Z</updated>
+    <updated>2021-04-05T06:17:09.348Z</updated>
     
     <summary type="html">
     
