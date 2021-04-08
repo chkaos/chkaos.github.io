@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-07T07:12:06.028Z</updated>
+  <updated>2021-04-08T16:31:44.542Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>WebAssembly 对比 JavaScript 及其使用场景</title>
+    <title>Web Workers及5个使用场景</title>
+    <link href="https://chkaos.top/posts/6edf3adc.html"/>
+    <id>https://chkaos.top/posts/6edf3adc.html</id>
+    <published>2021-04-09T09:21:41.000Z</published>
+    <updated>2021-04-08T16:31:44.542Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第七章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+      <category term="Web Workers" scheme="https://chkaos.top/tags/Web-Workers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebAssembly对比JavaScript及其使用场景</title>
     <link href="https://chkaos.top/posts/6f537ab8.html"/>
     <id>https://chkaos.top/posts/6f537ab8.html</id>
     <published>2021-04-07T06:33:13.000Z</published>
-    <updated>2021-04-07T07:12:06.028Z</updated>
+    <updated>2021-04-08T16:32:00.870Z</updated>
     
     <summary type="html">
     
@@ -151,7 +174,7 @@
     <link href="https://chkaos.top/posts/7440f480.html"/>
     <id>https://chkaos.top/posts/7440f480.html</id>
     <published>2021-03-16T13:40:11.000Z</published>
-    <updated>2021-04-01T08:46:56.536Z</updated>
+    <updated>2021-04-08T14:18:47.955Z</updated>
     
     <summary type="html">
     
@@ -174,7 +197,7 @@
     <link href="https://chkaos.top/posts/ade9e456.html"/>
     <id>https://chkaos.top/posts/ade9e456.html</id>
     <published>2021-03-14T08:52:00.000Z</published>
-    <updated>2021-04-01T08:30:46.737Z</updated>
+    <updated>2021-04-07T17:42:55.866Z</updated>
     
     <summary type="html">
     
@@ -183,7 +206,7 @@
     </summary>
     
     
-      <category term="职业发展" scheme="https://chkaos.top/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+      <category term="职业" scheme="https://chkaos.top/categories/%E8%81%8C%E4%B8%9A/"/>
     
     
       <category term="面试" scheme="https://chkaos.top/tags/%E9%9D%A2%E8%AF%95/"/>
