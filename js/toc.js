@@ -1,5 +1,5 @@
 // 参考自 主题https://github.com/fi3ework/hexo-theme-archer
-let prevHeight = 0
+var prevHeight = 0
 function initTocLinksScrollTop(tocLinks) {
   return [...tocLinks].map(link => {
     return getAbsPosition(link).y

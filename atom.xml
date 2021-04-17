@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-11T16:07:04.916Z</updated>
+  <updated>2021-04-16T17:34:32.300Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebRTC 及点对点网络通信机制</title>
+    <link href="https://chkaos.top/posts/ee31fe07.html"/>
+    <id>https://chkaos.top/posts/ee31fe07.html</id>
+    <published>2021-04-16T17:34:41.000Z</published>
+    <updated>2021-04-16T17:34:32.300Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十八章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="WebRTC" scheme="https://chkaos.top/tags/WebRTC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探究 Shadow DOM及独立组件构建</title>
+    <link href="https://chkaos.top/posts/7af46885.html"/>
+    <id>https://chkaos.top/posts/7af46885.html</id>
+    <published>2021-04-16T10:42:41.000Z</published>
+    <updated>2021-04-16T17:33:18.054Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十七章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="Shadow DOM" scheme="https://chkaos.top/tags/Shadow-DOM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>存储引擎及如何选择合适存储API</title>
+    <link href="https://chkaos.top/posts/8296c979.html"/>
+    <id>https://chkaos.top/posts/8296c979.html</id>
+    <published>2021-04-15T15:29:41.000Z</published>
+    <updated>2021-04-15T15:32:35.271Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十六章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="浏览器缓存" scheme="https://chkaos.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
   
   <entry>
     <title>类,继承探究及Babel/TypeScript代码转译</title>
@@ -408,75 +477,6 @@
       <category term="面试" scheme="https://chkaos.top/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="职业发展" scheme="https://chkaos.top/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常见排序算法总结</title>
-    <link href="https://chkaos.top/posts/2812144.html"/>
-    <id>https://chkaos.top/posts/2812144.html</id>
-    <published>2020-10-21T16:31:00.000Z</published>
-    <updated>2021-04-05T06:17:09.348Z</updated>
-    
-    <summary type="html">
-    
-      几种排序算法的理解与记录, Golang 实现
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="算法" scheme="https://chkaos.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="排序" scheme="https://chkaos.top/tags/%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 建站小记</title>
-    <link href="https://chkaos.top/posts/c84bd824.html"/>
-    <id>https://chkaos.top/posts/c84bd824.html</id>
-    <published>2020-08-29T08:22:00.000Z</published>
-    <updated>2021-04-01T08:32:01.401Z</updated>
-    
-    <summary type="html">
-    
-      Hexo博客使用及修改
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="建站小记" scheme="https://chkaos.top/tags/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/"/>
-    
-      <category term="Hexo" scheme="https://chkaos.top/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Theia 扫盲篇</title>
-    <link href="https://chkaos.top/posts/b8644cfb.html"/>
-    <id>https://chkaos.top/posts/b8644cfb.html</id>
-    <published>2020-08-19T16:25:46.000Z</published>
-    <updated>2021-04-01T08:32:11.966Z</updated>
-    
-    <summary type="html">
-    
-      目标 ：对 Eclipse Theia 框架技术有一个初步认识
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="Theia" scheme="https://chkaos.top/tags/Theia/"/>
-    
-      <category term="VS Code" scheme="https://chkaos.top/tags/VS-Code/"/>
     
   </entry>
   
