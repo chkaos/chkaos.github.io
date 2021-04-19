@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-16T17:34:32.300Z</updated>
+  <updated>2021-04-19T10:41:26.694Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义元素探秘及构建可复用组件最佳实践</title>
+    <link href="https://chkaos.top/posts/9af960d5.html"/>
+    <id>https://chkaos.top/posts/9af960d5.html</id>
+    <published>2021-04-19T10:41:41.000Z</published>
+    <updated>2021-04-19T10:41:26.694Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十九章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="自定义元素" scheme="https://chkaos.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%83%E7%B4%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Diff 算法</title>
+    <link href="https://chkaos.top/posts/c6d9fc5a.html"/>
+    <id>https://chkaos.top/posts/c6d9fc5a.html</id>
+    <published>2021-04-18T15:29:00.000Z</published>
+    <updated>2021-04-19T10:54:26.800Z</updated>
+    
+    <summary type="html">
+    
+      React Diff 介绍及优化建议
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="React" scheme="https://chkaos.top/tags/React/"/>
+    
+      <category term="React Diff" scheme="https://chkaos.top/tags/React-Diff/"/>
+    
+  </entry>
   
   <entry>
     <title>WebRTC 及点对点网络通信机制</title>
@@ -163,7 +209,7 @@
     <link href="https://chkaos.top/posts/987512c9.html"/>
     <id>https://chkaos.top/posts/987512c9.html</id>
     <published>2021-04-01T09:21:41.000Z</published>
-    <updated>2021-04-11T12:43:39.160Z</updated>
+    <updated>2021-04-19T09:00:23.778Z</updated>
     
     <summary type="html">
     
@@ -431,52 +477,6 @@
     
     
       <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浏览器同源策略</title>
-    <link href="https://chkaos.top/posts/7440f480.html"/>
-    <id>https://chkaos.top/posts/7440f480.html</id>
-    <published>2021-02-16T13:40:11.000Z</published>
-    <updated>2021-04-09T01:11:28.069Z</updated>
-    
-    <summary type="html">
-    
-      浏览器帮助阻隔恶意文档，减少可能被攻击的媒介的一种安全策略
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="浏览器" scheme="https://chkaos.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
-      <category term="同源策略" scheme="https://chkaos.top/tags/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>吹嘘录</title>
-    <link href="https://chkaos.top/posts/ade9e456.html"/>
-    <id>https://chkaos.top/posts/ade9e456.html</id>
-    <published>2021-02-14T08:52:00.000Z</published>
-    <updated>2021-04-11T15:55:22.208Z</updated>
-    
-    <summary type="html">
-    
-      工作内容记录, Get your work recognized: write a brag document 翻译
-    
-    </summary>
-    
-    
-      <category term="职业" scheme="https://chkaos.top/categories/%E8%81%8C%E4%B8%9A/"/>
-    
-    
-      <category term="面试" scheme="https://chkaos.top/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="职业发展" scheme="https://chkaos.top/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
     
   </entry>
   
