@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-19T10:41:26.694Z</updated>
+  <updated>2021-04-19T17:20:43.614Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>异常及同步/异步代码异常处理最佳实践</title>
+    <link href="https://chkaos.top/posts/f2e24d63.html"/>
+    <id>https://chkaos.top/posts/f2e24d63.html</id>
+    <published>2021-04-19T17:19:41.000Z</published>
+    <updated>2021-04-19T17:20:43.614Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="异常处理" scheme="https://chkaos.top/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义元素探秘及构建可复用组件最佳实践</title>
@@ -456,27 +479,6 @@
       <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
     
       <category term="Google Chrome V8" scheme="https://chkaos.top/tags/Google-Chrome-V8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS引擎，运行时及调用栈概述</title>
-    <link href="https://chkaos.top/posts/503970b4.html"/>
-    <id>https://chkaos.top/posts/503970b4.html</id>
-    <published>2021-02-28T10:46:01.000Z</published>
-    <updated>2021-04-11T08:21:57.662Z</updated>
-    
-    <summary type="html">
-    
-      How JavaScript works 系列第一章
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
     
   </entry>
   
