@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-19T17:20:43.614Z</updated>
+  <updated>2021-04-21T13:20:43.544Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5种跨站脚本攻击及防御措施</title>
+    <link href="https://chkaos.top/posts/6eb073a6.html"/>
+    <id>https://chkaos.top/posts/6eb073a6.html</id>
+    <published>2021-04-21T13:20:41.000Z</published>
+    <updated>2021-04-21T13:20:43.544Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十一章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="跨站脚本攻击" scheme="https://chkaos.top/tags/%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>异常及同步/异步代码异常处理最佳实践</title>
@@ -456,29 +479,6 @@
       <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
     
       <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>V8 引擎探索及编写最优代码的5个技巧</title>
-    <link href="https://chkaos.top/posts/84794ca2.html"/>
-    <id>https://chkaos.top/posts/84794ca2.html</id>
-    <published>2021-03-01T09:11:46.000Z</published>
-    <updated>2021-04-11T08:14:11.268Z</updated>
-    
-    <summary type="html">
-    
-      How JavaScript works 系列第二章
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
-    
-      <category term="Google Chrome V8" scheme="https://chkaos.top/tags/Google-Chrome-V8/"/>
     
   </entry>
   
