@@ -6,7 +6,7 @@ function initTocLinksScrollTop(tocLinks) {
   })
 }
 
-let calcAnchorLink = (heights, currHeight) => {
+var calcAnchorLink = (heights, currHeight) => {
   for (let i = 0; i < heights.length; i++) {
     if (Math.abs(currHeight - heights[i]) < 1.1) {
       return i
@@ -20,7 +20,7 @@ let isPassingThrough = (currHeight, prevHeight, linkHeight) => {
 }
 
 function calcScrollIntoScreenIndex(heights, prevHeight, currHeight) {
-  let anchorLinkIndex = calcAnchorLink(heights, currHeight)
+  var anchorLinkIndex = calcAnchorLink(heights, currHeight)
   if (anchorLinkIndex >= 0) {
     return anchorLinkIndex
   }
