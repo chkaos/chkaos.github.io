@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chkaos.top/"/>
-  <updated>2021-04-24T19:47:17.411Z</updated>
+  <updated>2021-05-16T09:13:03.933Z</updated>
   <id>https://chkaos.top/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3 种多态</title>
+    <link href="https://chkaos.top/posts/9fcc23ec.html"/>
+    <id>https://chkaos.top/posts/9fcc23ec.html</id>
+    <published>2021-05-16T09:03:41.000Z</published>
+    <updated>2021-05-16T09:13:03.933Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十六章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>函数式编程及与其他范式对比</title>
+    <link href="https://chkaos.top/posts/2819cdc2.html"/>
+    <id>https://chkaos.top/posts/2819cdc2.html</id>
+    <published>2021-05-15T09:21:41.000Z</published>
+    <updated>2021-05-16T09:12:37.607Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十五章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+      <category term="函数式编程" scheme="https://chkaos.top/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>密码学及中间人攻击处理</title>
@@ -433,52 +481,6 @@
       <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
     
       <category term="Service Workers" scheme="https://chkaos.top/tags/Service-Workers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web Workers及5个使用场景</title>
-    <link href="https://chkaos.top/posts/6edf3adc.html"/>
-    <id>https://chkaos.top/posts/6edf3adc.html</id>
-    <published>2021-03-09T09:21:41.000Z</published>
-    <updated>2021-04-11T08:14:47.493Z</updated>
-    
-    <summary type="html">
-    
-      How JavaScript works 系列第七章
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
-    
-      <category term="Web Workers" scheme="https://chkaos.top/tags/Web-Workers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WebAssembly对比JavaScript及其使用场景</title>
-    <link href="https://chkaos.top/posts/6f537ab8.html"/>
-    <id>https://chkaos.top/posts/6f537ab8.html</id>
-    <published>2021-03-07T06:33:13.000Z</published>
-    <updated>2021-04-11T08:14:24.586Z</updated>
-    
-    <summary type="html">
-    
-      How JavaScript works 系列第六章
-    
-    </summary>
-    
-    
-      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
-    
-      <category term="WebAssembly" scheme="https://chkaos.top/tags/WebAssembly/"/>
     
   </entry>
   
