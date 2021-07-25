@@ -1,0 +1,1 @@
+"use strict";document.body.oncopy=function(t){t.preventDefault();var n=void 0,o=window.getSelection(0).toString(),n=45<o.length?o+"\n\n\n作者: chkaos\n链接: "+window.location.href+"\n来源: chkaos.top\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。":o;return(t.clipboardData?t:window).clipboardData.setData("text",n)};

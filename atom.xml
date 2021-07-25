@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>chkaos - Find the calm in chaos</title>
+  <icon>https://chkaos.top/icon.png</icon>
+  <subtitle>Find the calm in chaos</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://chkaos.top/"/>
+  <updated>2021-06-27T14:31:00.000Z</updated>
+  <id>https://chkaos.top/</id>
+  
+  <author>
+    <name>Chkaos</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KK 给年轻人的一些人生建议</title>
+    <link href="https://chkaos.top/posts/c6a7ef4.html"/>
+    <id>https://chkaos.top/posts/c6a7ef4.html</id>
+    <published>2021-06-27T14:31:00.000Z</published>
+    <updated>2021-06-27T14:31:00.000Z</updated>
+    
+    <summary type="html">
+    
+      凯文·凯利的 68 + 99 条建议合集，鸡汤虽好不要贪杯
+    
+    </summary>
+    
+    
+      <category term="思考" scheme="https://chkaos.top/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="凯文·凯利" scheme="https://chkaos.top/tags/%E5%87%AF%E6%96%87%C2%B7%E5%87%AF%E5%88%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>So long, gay 骆驼</title>
+    <link href="https://chkaos.top/posts/5e24e4b2.html"/>
+    <id>https://chkaos.top/posts/5e24e4b2.html</id>
+    <published>2021-06-23T04:10:00.000Z</published>
+    <updated>2021-06-23T04:10:00.000Z</updated>
+    
+    <summary type="html">
+    
+      巫师三游戏记录
+    
+    </summary>
+    
+    
+      <category term="游戏" scheme="https://chkaos.top/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+      <category term="游戏" scheme="https://chkaos.top/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+      <category term="巫师三" scheme="https://chkaos.top/tags/%E5%B7%AB%E5%B8%88%E4%B8%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谷歌学术使用指南</title>
+    <link href="https://chkaos.top/posts/b1ca8d55.html"/>
+    <id>https://chkaos.top/posts/b1ca8d55.html</id>
+    <published>2021-06-16T11:10:00.000Z</published>
+    <updated>2021-06-16T11:10:00.000Z</updated>
+    
+    <summary type="html">
+    
+      Google Scholar终极使用指南 - 转载，内容略有删减
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://chkaos.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Google Scholar" scheme="https://chkaos.top/tags/Google-Scholar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://chkaos.top/posts/2f57a694.html"/>
+    <id>https://chkaos.top/posts/2f57a694.html</id>
+    <published>2021-05-26T11:44:41.000Z</published>
+    <updated>2021-07-25T14:57:00.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十七章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3 种多态</title>
+    <link href="https://chkaos.top/posts/9fcc23ec.html"/>
+    <id>https://chkaos.top/posts/9fcc23ec.html</id>
+    <published>2021-05-16T09:03:41.000Z</published>
+    <updated>2021-05-16T09:03:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十六章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>函数式编程及与其他范式对比</title>
+    <link href="https://chkaos.top/posts/2819cdc2.html"/>
+    <id>https://chkaos.top/posts/2819cdc2.html</id>
+    <published>2021-05-15T09:21:41.000Z</published>
+    <updated>2021-05-15T09:21:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十五章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="Javascript" scheme="https://chkaos.top/tags/Javascript/"/>
+    
+      <category term="函数式编程" scheme="https://chkaos.top/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>密码学及中间人攻击处理</title>
+    <link href="https://chkaos.top/posts/b7dcf6e2.html"/>
+    <id>https://chkaos.top/posts/b7dcf6e2.html</id>
+    <published>2021-04-24T19:46:41.000Z</published>
+    <updated>2021-04-24T19:46:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十四章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="密码学" scheme="https://chkaos.top/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迭代器及生成器高阶控制技巧</title>
+    <link href="https://chkaos.top/posts/98cc9fa3.html"/>
+    <id>https://chkaos.top/posts/98cc9fa3.html</id>
+    <published>2021-04-23T18:06:41.000Z</published>
+    <updated>2021-04-23T18:06:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十三章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>跨站请求伪造攻击及7种缓解策略</title>
+    <link href="https://chkaos.top/posts/2a7ab037.html"/>
+    <id>https://chkaos.top/posts/2a7ab037.html</id>
+    <published>2021-04-22T19:26:41.000Z</published>
+    <updated>2021-04-22T19:26:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十二章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="异常处理" scheme="https://chkaos.top/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5种跨站脚本攻击及防御措施</title>
+    <link href="https://chkaos.top/posts/6eb073a6.html"/>
+    <id>https://chkaos.top/posts/6eb073a6.html</id>
+    <published>2021-04-21T13:20:41.000Z</published>
+    <updated>2021-04-21T13:20:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十一章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="跨站脚本攻击" scheme="https://chkaos.top/tags/%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>异常及同步/异步代码异常处理最佳实践</title>
+    <link href="https://chkaos.top/posts/f2e24d63.html"/>
+    <id>https://chkaos.top/posts/f2e24d63.html</id>
+    <published>2021-04-19T17:19:41.000Z</published>
+    <updated>2021-04-19T17:19:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第二十章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="异常处理" scheme="https://chkaos.top/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义元素探秘及构建可复用组件最佳实践</title>
+    <link href="https://chkaos.top/posts/9af960d5.html"/>
+    <id>https://chkaos.top/posts/9af960d5.html</id>
+    <published>2021-04-19T10:41:41.000Z</published>
+    <updated>2021-04-19T10:41:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十九章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="自定义元素" scheme="https://chkaos.top/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%83%E7%B4%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Diff 算法</title>
+    <link href="https://chkaos.top/posts/c6d9fc5a.html"/>
+    <id>https://chkaos.top/posts/c6d9fc5a.html</id>
+    <published>2021-04-18T15:29:00.000Z</published>
+    <updated>2021-04-18T15:29:00.000Z</updated>
+    
+    <summary type="html">
+    
+      React Diff 介绍及优化建议
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="React" scheme="https://chkaos.top/tags/React/"/>
+    
+      <category term="React Diff" scheme="https://chkaos.top/tags/React-Diff/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebRTC 及点对点网络通信机制</title>
+    <link href="https://chkaos.top/posts/ee31fe07.html"/>
+    <id>https://chkaos.top/posts/ee31fe07.html</id>
+    <published>2021-04-16T17:34:41.000Z</published>
+    <updated>2021-04-16T17:34:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十八章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="WebRTC" scheme="https://chkaos.top/tags/WebRTC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探究 Shadow DOM及独立组件构建</title>
+    <link href="https://chkaos.top/posts/7af46885.html"/>
+    <id>https://chkaos.top/posts/7af46885.html</id>
+    <published>2021-04-16T10:42:41.000Z</published>
+    <updated>2021-04-16T10:42:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十七章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="Shadow DOM" scheme="https://chkaos.top/tags/Shadow-DOM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>存储引擎及如何选择合适存储API</title>
+    <link href="https://chkaos.top/posts/8296c979.html"/>
+    <id>https://chkaos.top/posts/8296c979.html</id>
+    <published>2021-04-15T15:29:41.000Z</published>
+    <updated>2021-04-15T15:29:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十六章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="浏览器缓存" scheme="https://chkaos.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>类,继承探究及Babel/TypeScript代码转译</title>
+    <link href="https://chkaos.top/posts/7d7cd34b.html"/>
+    <id>https://chkaos.top/posts/7d7cd34b.html</id>
+    <published>2021-04-11T09:21:41.000Z</published>
+    <updated>2021-04-11T09:21:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十五章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="编译原理" scheme="https://chkaos.top/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+      <category term="Class" scheme="https://chkaos.top/tags/Class/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解析，抽象语法树及最小化解析时间的5个技巧</title>
+    <link href="https://chkaos.top/posts/9d8c3abf.html"/>
+    <id>https://chkaos.top/posts/9d8c3abf.html</id>
+    <published>2021-04-10T09:21:41.000Z</published>
+    <updated>2021-04-10T09:21:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十四章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="编译原理" scheme="https://chkaos.top/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS和JS动画底层原理及其性能优化</title>
+    <link href="https://chkaos.top/posts/3eb63396.html"/>
+    <id>https://chkaos.top/posts/3eb63396.html</id>
+    <published>2021-04-05T09:21:41.000Z</published>
+    <updated>2021-04-05T09:21:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十三章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="CSS" scheme="https://chkaos.top/tags/CSS/"/>
+    
+      <category term="动画" scheme="https://chkaos.top/tags/%E5%8A%A8%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探索网络层及优化其性能和安全性</title>
+    <link href="https://chkaos.top/posts/987512c9.html"/>
+    <id>https://chkaos.top/posts/987512c9.html</id>
+    <published>2021-04-01T09:21:41.000Z</published>
+    <updated>2021-04-01T09:21:41.000Z</updated>
+    
+    <summary type="html">
+    
+      How JavaScript works 系列第十二章
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://chkaos.top/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="How JavaScript works" scheme="https://chkaos.top/tags/How-JavaScript-works/"/>
+    
+      <category term="网络" scheme="https://chkaos.top/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="浏览器" scheme="https://chkaos.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+</feed>

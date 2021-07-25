@@ -1,0 +1,1 @@
+"use strict";var ap=null,isPlay=!1;function ready(){ap.list.switch(0),toggleMusic()}function toggleMusic(){isPlay?ap.pause():ap.play(),isPlay=!isPlay}Object.defineProperty(document.querySelector("meting-js"),"aplayer",{set:function(e){ap=e,ready()}});
