@@ -1,1 +1,165 @@
-"use strict";function loadBackTop(){$("#navbar");var n=$("#back-to-top"),i=$("footer.footer"),a=$(".column-main"),l=$(".column-left"),c=$(".column-right"),d=0,r=null,p={base:{classname:"card has-text-centered",left:"",width:64,bottom:20,"border-radius":4}};function b(e){if(null===r||(o=r,t=e,[].concat(Object.keys(o),Object.keys(t)).some(function(e){return!Object.prototype.hasOwnProperty.call(o,e)||!Object.prototype.hasOwnProperty.call(t,e)||t[e]!==o[e]}))){var o,t,s;for(s in n.attr("class",e.classname),e)"classname"!==s&&n.css(s,e[s]);r=e}}function h(){return 1024<=window.innerWidth}function u(){return 0<c.length}function m(){return $(window).scrollTop()+$(window).height()}function w(){return n.outerHeight(!0)}function e(){var e,o,t,s=$(window).scrollTop();h()||768<=window.innerWidth&&!h()&&!(0<l.length)&&u()?(t=void 0,e=(a.outerWidth()-a.width())/2,o=i.offset().top+w()/2+20,delete(t=0===s||m()<(u()?Math.max.apply(null,c.find(".widget").map(function(){return $(this).offset().top+$(this).outerHeight(!0)})):0)+e+w()?p["desktop-hidden"]:m()<o?p["desktop-visible"]:Object.assign({},p["desktop-dock"],{bottom:m()-o+20})).left,t.right="20px",b(t)):($(window).scrollTop()<d&&0<$(window).scrollTop()?b(p["mobile-visible"]):b(p["mobile-hidden"]),d=$(window).scrollTop())}p["desktop-hidden"]=Object.assign({},p.base,{classname:p.base.classname+" rise-up"}),p["desktop-visible"]=Object.assign({},p["desktop-hidden"],{classname:p["desktop-hidden"].classname+" fade-in"}),p["desktop-dock"]=Object.assign({},p["desktop-visible"],{classname:p["desktop-visible"].classname+" fade-in",width:40,"border-radius":"50%"}),p["mobile-hidden"]=Object.assign({},p.base,{classname:p.base.classname+" fade-in",right:20}),p["mobile-visible"]=Object.assign({},p["mobile-hidden"],{classname:p["mobile-hidden"].classname+" rise-up"}),e(),$(window).resize(debounce(e,200)),$(window).scroll(throttle(e,20)),$("#back-to-top").on("click",function(){CSS&&CSS.supports&&CSS.supports("(scroll-behavior: smooth)")?window.scroll({top:0,behavior:"smooth"}):$("body, html").animate({scrollTop:0},400)})}$(document).ready(loadBackTop());
+$(document).ready(loadBackTop());
+
+function loadBackTop() {
+  const $nav = $("#navbar");
+  const $button = $("#back-to-top");
+  const $footer = $("footer.footer");
+  const $mainColumn = $(".column-main");
+  const $leftSidebar = $(".column-left");
+  const $rightSidebar = $(".column-right");
+  let lastScrollTop = 0;
+  const rightMargin = 20;
+  const bottomMargin = 20;
+  let lastState = null;
+  const state = {
+    base: {
+      classname: "card has-text-centered",
+      left: "",
+      width: 64,
+      bottom: bottomMargin,
+      "border-radius": 4,
+    },
+  };
+  state["desktop-hidden"] = Object.assign({}, state.base, {
+    classname: state.base.classname + " rise-up",
+  });
+  state["desktop-visible"] = Object.assign({}, state["desktop-hidden"], {
+    classname: state["desktop-hidden"].classname + " fade-in",
+  });
+  state["desktop-dock"] = Object.assign({}, state["desktop-visible"], {
+    classname: state["desktop-visible"].classname + " fade-in",
+    width: 40,
+    "border-radius": "50%",
+  });
+  state["mobile-hidden"] = Object.assign({}, state.base, {
+    classname: state.base.classname + " fade-in",
+    right: rightMargin,
+  });
+  state["mobile-visible"] = Object.assign({}, state["mobile-hidden"], {
+    classname: state["mobile-hidden"].classname + " rise-up",
+  });
+
+  function isStateEquals(prev, next) {
+    return ![].concat(Object.keys(prev), Object.keys(next)).some((key) => {
+      return (
+        !Object.prototype.hasOwnProperty.call(prev, key) ||
+        !Object.prototype.hasOwnProperty.call(next, key) ||
+        next[key] !== prev[key]
+      );
+    });
+  }
+
+  function applyState(state) {
+    if (lastState !== null && isStateEquals(lastState, state)) {
+      return;
+    }
+    $button.attr("class", state.classname);
+    for (const prop in state) {
+      if (prop === "classname") {
+        continue;
+      }
+      $button.css(prop, state[prop]);
+    }
+    lastState = state;
+  }
+
+  function isDesktop() {
+    return window.innerWidth >= 1024;
+  }
+
+  function isTablet() {
+    return window.innerWidth >= 768 && !isDesktop();
+  }
+
+  function isScrollUp() {
+    return $(window).scrollTop() < lastScrollTop && $(window).scrollTop() > 0;
+  }
+
+  function hasLeftSidebar() {
+    return $leftSidebar.length > 0;
+  }
+
+  function hasRightSidebar() {
+    return $rightSidebar.length > 0;
+  }
+
+  function getRightSidebarBottom() {
+    if (!hasRightSidebar()) {
+      return 0;
+    }
+    return Math.max.apply(
+      null,
+      $rightSidebar.find(".widget").map(function () {
+        return $(this).offset().top + $(this).outerHeight(true);
+      })
+    );
+  }
+
+  function getScrollTop() {
+    return $(window).scrollTop();
+  }
+
+  function getScrollBottom() {
+    return $(window).scrollTop() + $(window).height();
+  }
+
+  function getButtonHeight() {
+    return $button.outerHeight(true);
+  }
+
+  function updateScrollTop() {
+    lastScrollTop = $(window).scrollTop();
+  }
+
+  function update() {
+    var currentTop = getScrollTop();
+
+    // desktop mode or tablet mode with only right sidebar enabled
+    if (isDesktop() || (isTablet() && !hasLeftSidebar() && hasRightSidebar())) {
+      let nextState;
+
+      const padding = ($mainColumn.outerWidth() - $mainColumn.width()) / 2;
+      const maxBottom =
+        $footer.offset().top + getButtonHeight() / 2 + bottomMargin;
+      if (
+        currentTop === 0 ||
+        getScrollBottom() <
+          getRightSidebarBottom() + padding + getButtonHeight()
+      ) {
+        nextState = state["desktop-hidden"];
+      } else if (getScrollBottom() < maxBottom) {
+        nextState = state["desktop-visible"];
+      } else {
+        nextState = Object.assign({}, state["desktop-dock"], {
+          bottom: getScrollBottom() - maxBottom + bottomMargin,
+        });
+      }
+
+      delete nextState["left"];
+      nextState.right = "20px";
+
+      applyState(nextState);
+
+    } else {
+      // mobile and tablet mode
+      if (!isScrollUp()) {
+        applyState(state["mobile-hidden"]);
+      } else {
+        applyState(state["mobile-visible"]);
+      }
+      updateScrollTop();
+    }
+  }
+
+  update();
+  $(window).resize(debounce(update, 200));
+  $(window).scroll(throttle(update, 20));
+
+  $("#back-to-top").on("click", () => {
+    if (CSS && CSS.supports && CSS.supports('(scroll-behavior: smooth)')) {
+      window.scroll({ top: 0, behavior: 'smooth' });
+    } else {
+        $('body, html').animate({ scrollTop: 0 }, 400);
+    }
+  });
+}

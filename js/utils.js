@@ -1,1 +1,172 @@
-"use strict";function getDateDiff(e){var t=864e5,n=(new Date).getTime()-e;if(!(n<0)){var i=n/2592e6,r=n/(7*t),e=n/t,t=n/36e5,n=n/6e4;return result=1<=i?" "+parseInt(i)+"月前":1<=r?" "+parseInt(r)+"周前":1<=e?" "+parseInt(e)+"天前":1<=t?" "+parseInt(t)+"小时前":1<=n?" "+parseInt(n)+"分钟前":" 刚刚",result}}Storage.prototype.setExpire=function(e,t,n){n={data:t,time:Date.now(),expire:n};localStorage.setItem(e,JSON.stringify(n))},Storage.prototype.getExpire=function(e){var t=localStorage.getItem(e);return t&&(t=JSON.parse(t),Date.now()-t.time>t.expire?(localStorage.removeItem(e),null):t.data)},Date.prototype.Format=function(e){var t,n={"M+":this.getMonth()+1,"d+":this.getDate(),"h+":this.getHours(),"m+":this.getMinutes(),"s+":this.getSeconds(),"q+":Math.floor((this.getMonth()+3)/3),S:this.getMilliseconds()};for(t in/(y+)/.test(e)&&(e=e.replace(RegExp.$1,(this.getFullYear()+"").substr(4-RegExp.$1.length))),n)new RegExp("("+t+")").test(e)&&(e=e.replace(RegExp.$1,1==RegExp.$1.length?n[t]:("00"+n[t]).substr((""+n[t]).length)));return e};var expireTime1H=36e5;function isNightRange(e,t){var n=new Date,i=n.getHours()+":"+n.getMinutes(),r=e.split(":");if(2!=r.length)return!1;var a=t.split(":");if(2!=a.length)return!1;n=i.split(":");if(2!=a.length)return!1;e=new Date,t=new Date,i=new Date;return e.setHours(r[0]),e.setMinutes(r[1]),t.setHours(a[0]),t.setMinutes(a[1]),i.setHours(n[0]),i.setMinutes(n[1]),0<i.getTime()-e.getTime()&&i.getTime()-t.getTime()<0||(console.log("now Date is："+i.getHours()+":"+i.getMinutes()+"，is not Night！"),!1)}var btoa="undefined"!=typeof window&&window.btoa&&window.btoa.bind(window);function throttle(n,i,r){var a,o,s,u=0;r=r||{};function l(){u=!1===r.leading?0:(new Date).getTime(),a=null,n.apply(o,s),a||(o=s=null)}return function(){var e=(new Date).getTime();u||!1!==r.leading||(u=e);var t=i-(e-u);o=this,s=arguments,t<=0||i<t?(a&&(clearTimeout(a),a=null),u=e,n.apply(o,s),a||(o=s=null)):a||!1===r.trailing||(a=setTimeout(l,t))}}function debounce(i,r,a){var o;return function(){var e=this,t=arguments,n=a&&!o;clearTimeout(o),o=setTimeout(function(){o=null,a||i.apply(e,t)},r),n&&i.apply(e,t)}}
+Storage.prototype.setExpire = (key, value, expire) => {
+  let obj = {
+    data: value,
+    time: Date.now(),
+    expire: expire,
+  };
+  localStorage.setItem(key, JSON.stringify(obj));
+};
+
+Storage.prototype.getExpire = (key) => {
+  let val = localStorage.getItem(key);
+  if (!val) {
+    return val;
+  }
+  val = JSON.parse(val);
+  if (Date.now() - val.time > val.expire) {
+    localStorage.removeItem(key);
+    return null;
+  }
+  return val.data;
+};
+
+Date.prototype.Format = function (fmt) {
+  //author: meizz
+  var o = {
+    "M+": this.getMonth() + 1, //月份
+    "d+": this.getDate(), //日
+    "h+": this.getHours(), //小时
+    "m+": this.getMinutes(), //分
+    "s+": this.getSeconds(), //秒
+    "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+    S: this.getMilliseconds(), //毫秒
+  };
+  if (/(y+)/.test(fmt))
+    fmt = fmt.replace(
+      RegExp.$1,
+      (this.getFullYear() + "").substr(4 - RegExp.$1.length)
+    );
+  for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt))
+      fmt = fmt.replace(
+        RegExp.$1,
+        RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length)
+      );
+  return fmt;
+};
+
+function getDateDiff(dateTimeStamp) {
+  var minute = 1000 * 60;
+  var hour = minute * 60;
+  var day = hour * 24;
+  var halfamonth = day * 15;
+  var month = day * 30;
+  var now = new Date().getTime();
+  var diffValue = now - dateTimeStamp;
+  if (diffValue < 0) {
+    return;
+  }
+  var monthC = diffValue / month;
+  var weekC = diffValue / (7 * day);
+  var dayC = diffValue / day;
+  var hourC = diffValue / hour;
+  var minC = diffValue / minute;
+  if (monthC >= 1) {
+    result = " " + parseInt(monthC) + "月前";
+  } else if (weekC >= 1) {
+    result = " " + parseInt(weekC) + "周前";
+  } else if (dayC >= 1) {
+    result = " " + parseInt(dayC) + "天前";
+  } else if (hourC >= 1) {
+    result = " " + parseInt(hourC) + "小时前";
+  } else if (minC >= 1) {
+    result = " " + parseInt(minC) + "分钟前";
+  } else result = " 刚刚";
+  return result;
+}
+
+var expireTime1H = 1000 * 60 * 60; // 1小时过期
+
+function isNightRange(beginTime, endTime) {
+  let nowDate = new Date();
+  var nowTime = nowDate.getHours() + ":" + nowDate.getMinutes();
+  var strb = beginTime.split(":");
+  if (strb.length != 2) {
+    return false;
+  }
+
+  var stre = endTime.split(":");
+  if (stre.length != 2) {
+    return false;
+  }
+
+  var strn = nowTime.split(":");
+  if (stre.length != 2) {
+    return false;
+  }
+
+  var b = new Date();
+  var e = new Date();
+  var n = new Date();
+
+  b.setHours(strb[0]);
+  b.setMinutes(strb[1]);
+  e.setHours(stre[0]);
+  e.setMinutes(stre[1]);
+  n.setHours(strn[0]);
+  n.setMinutes(strn[1]);
+
+  if (n.getTime() - b.getTime() > 0 && n.getTime() - e.getTime() < 0) {
+    return true;
+  } else {
+    console.log(
+      "now Date is：" + n.getHours() + ":" + n.getMinutes() + "，is not Night！"
+    );
+    return false;
+  }
+}
+
+var btoa =
+  typeof window !== "undefined" && window.btoa && window.btoa.bind(window);
+
+// 节流
+function throttle(func, wait, options) {
+  var timeout, context, args;
+  var previous = 0;
+  if (!options) options = {};
+
+  var later = function () {
+    previous = options.leading === false ? 0 : new Date().getTime();
+    timeout = null;
+    func.apply(context, args);
+    if (!timeout) context = args = null;
+  };
+
+  var throttled = function () {
+    var now = new Date().getTime();
+    if (!previous && options.leading === false) previous = now;
+    var remaining = wait - (now - previous);
+    context = this;
+    args = arguments;
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      previous = now;
+      func.apply(context, args);
+      if (!timeout) context = args = null;
+    } else if (!timeout && options.trailing !== false) {
+      timeout = setTimeout(later, remaining);
+    }
+  };
+
+  return throttled;
+}
+
+// 去抖函数
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function () {
+    var context = this;
+    var args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}

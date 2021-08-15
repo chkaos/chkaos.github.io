@@ -1,1 +1,23 @@
-"use strict";function lazyLoadImg(){var t=new IntersectionObserver(function(e){e.forEach(function(e){e.isIntersecting&&((e=e.target).srcset=e.getAttribute("data-srcset"),e.className+=" loaded",t.unobserve(e))})});Array.from(document.querySelectorAll("img.lazyload")).forEach(function(e){t.observe(e)})}lazyLoadImg();
+"use strict";
+function lazyLoadImg() {
+  function query(selector) {
+    return Array.from(document.querySelectorAll(selector));
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        img.srcset = img.getAttribute("data-srcset");
+        img.className += " loaded";
+        io.unobserve(img);
+      }
+    });
+  });
+
+  query("img.lazyload").forEach(function (item) {
+    io.observe(item);
+  });
+}
+
+lazyLoadImg();

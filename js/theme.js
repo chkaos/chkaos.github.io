@@ -1,1 +1,66 @@
-"use strict";function isNightFun(){var t=localStorage.getExpire("night");return null==t&&(t=isNightRange("19:00","23:59")||isNightRange("00:00","07:00")?"true":"false",localStorage.setExpire("night",t,expireTime1H)),t}var nightNav,nightIcon,isNight=isNightFun();function applyNight(t){"true"==t?(document.body.className+=" night",nightIcon&&(nightIcon.className=nightIcon.className.replace(/ fa-moon/g,"")+" fa-lightbulb")):(document.body.className=document.body.className.replace(/ night/g,""),nightIcon&&(nightIcon.className=nightIcon.className.replace(/ fa-lightbulb/g,"")+" fa-moon"))}function findNightIcon(){nightNav=document.getElementById("btn-toggle-dark"),nightIcon=document.getElementById("night-icon"),nightNav&&nightIcon?(nightNav.addEventListener("click",switchNight),nightIcon.className=isNight?nightIcon.className.replace(/ fa-moon/g,"")+" fa-lightbulb":nightIcon.className.replace(/ fa-lightbulb/g,"")+" fa-moon"):setTimeout(findNightIcon,100)}function switchNight(){applyNight(isNight="false"==isNight?"true":"false"),localStorage.setExpire("night",isNight,expireTime1H),"function"==typeof loadUtterances&&loadUtterances()}findNightIcon(),applyNight(isNight);
+function isNightFun() {
+  var isNightTemp = localStorage.getExpire('night');
+
+  // 第一次进来判断是白天还是晚上
+  if (isNightTemp == null || isNightTemp == undefined) {
+      if (isNightRange("19:00", "23:59") || isNightRange("00:00", "07:00")) {
+          isNightTemp = 'true';
+      } else {
+          isNightTemp = 'false';
+      }
+      localStorage.setExpire("night", isNightTemp, expireTime1H);
+  }
+  return isNightTemp;
+}
+
+var isNight=isNightFun();
+// 参考自 https://www.imaegoo.com/
+var nightNav;
+var nightIcon;
+
+function applyNight(value) {
+  if (value == 'true') {
+      document.body.className += ' night'
+      if (nightIcon) {
+          nightIcon.className = nightIcon.className.replace(/ fa-moon/g, '') + ' fa-lightbulb'
+      }
+  } else {
+      document.body.className = document.body.className.replace(/ night/g, '')
+      if (nightIcon) {
+          nightIcon.className = nightIcon.className.replace(/ fa-lightbulb/g, '') + ' fa-moon'
+      }
+  }
+}
+
+function findNightIcon() {
+  nightNav = document.getElementById('btn-toggle-dark');
+  nightIcon = document.getElementById('night-icon');
+  if (!nightNav || !nightIcon) {
+      setTimeout(findNightIcon, 100);
+  } else {
+      nightNav.addEventListener('click', switchNight);
+      if (isNight) {
+          nightIcon.className = nightIcon.className.replace(/ fa-moon/g, '') + ' fa-lightbulb'
+      } else {
+          nightIcon.className = nightIcon.className.replace(/ fa-lightbulb/g, '') + ' fa-moon'
+      }
+  }
+}
+
+function switchNight() {
+
+  if (isNight == 'false') {
+      isNight = 'true';
+  } else {
+      isNight = 'false';
+  }
+  
+  applyNight(isNight);
+  localStorage.setExpire('night', isNight, expireTime1H);
+  if(typeof loadUtterances == 'function'){
+      loadUtterances();
+  }
+}
+
+findNightIcon();
+applyNight(isNight);

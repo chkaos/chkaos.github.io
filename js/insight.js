@@ -1,1 +1,313 @@
-"use strict";function loadInsight(t,a){var e=$(".searchbox"),r=e.find(".searchbox-input"),s=e.find(".searchbox-body");function i(t,n,e){if(!Array.isArray(n)||!n.length||!t)return e?t.slice(0,e):t;var r=t.toLowerCase(),n=n.map(function(t){var n=r.indexOf(t.toLowerCase());return t&&-1!==n?[n,n+t.length]:null}).filter(function(t){return null!==t}).sort(function(t,n){return t[0]-n[0]||t[1]-n[1]});if(!n.length)return t;var o,a,s="",i=0,c=(o=void 0,a=[],n.forEach(function(t){!o||t[0]>o[1]?a.push(o=t):t[1]>o[1]&&(o[1]=t[1])}),a),l=[c[0][0],c[c.length-1][1]];e&&e<l[1]&&(i=l[0]);for(var u=0;u<c.length;u++){var f=c[u];if(s+=t.slice(i,Math.min(f[0],l[0]+e)),e&&f[0]>=l[0]+e)break;s+="<em>"+t.slice(f[0],f[1])+"</em>",i=f[1],u===c.length-1&&(s+=e?t.slice(f[1],Math.min(t.length,l[0]+e+1)):t.slice(f[1]))}return s}function c(t,n,e,r,o){return'<a class="searchbox-result-item" href="'+o+'">\n            <span class="searchbox-result-icon">\n                <i class="fa fa-'+t+'" />\n            </span>\n            <span class="searchbox-result-content">\n                <span class="searchbox-result-title">\n                    '+(n=null!=n&&""!==n?n:a.untitled)+"\n                    "+(e?'<span class="searchbox-result-title-secondary">('+e+")</span>":"")+"\n                </span>\n                "+(r?'<span class="searchbox-result-preview">'+r+"</span>":"")+"\n            </span>\n        </a>"}function o(r,o,t){var n=void 0;if(0===t.length)return null;var e=a[o.toLowerCase()];switch(o){case"POSTS":case"PAGES":n=t.map(function(t){return c("file",i(t.title,r),null,i(t.text,r,100),t.link)});break;case"CATEGORIES":case"TAGS":n=t.map(function(t){var n=i(t.name,r),e=i(t.slug,r);return c("CATEGORIES"===o?"folder":"tag",n,e,null,t.link)});break;default:return null}return e=e,$("<section>").addClass("searchbox-result-section").append($("<header>").text(e)).append(n)}function l(t){return t.split(" ").filter(function(t){return!!t}).map(function(t){return t.toLowerCase()})}function u(t,e,r){t=l(t);return t.filter(function(n){return 0<r.filter(function(t){return!!Object.prototype.hasOwnProperty.call(e,t)&&-1<e[t].toLowerCase().indexOf(n)}).length}).length===t.length}function f(t,r,n,o){var a=0;return l(t).forEach(function(t){var e=new RegExp(t,"img");n.forEach(function(t,n){Object.prototype.hasOwnProperty.call(r,t)&&(t=r[t].match(e),a+=t?t.length*o[n]:0)})}),a}function h(t,n){var e,r,o={post:function(t){return f(e,t,["title","text"],[3,1])},page:function(t){return f(e,t,["title","text"],[3,1])},category:function(t){return f(e,t,["name","slug"],[1,1])},tag:function(t){return f(e,t,["name","slug"],[1,1])}},a=(r=e=n,{post:function(t){return u(r,t,["title","text"])},page:function(t){return u(r,t,["title","text"])},category:function(t){return u(r,t,["name","slug"])},tag:function(t){return u(r,t,["name","slug"])}}),s=t.posts,i=t.pages,n=t.tags,t=t.categories;return{posts:s.filter(a.post).sort(function(t,n){return o.post(n)-o.post(t)}).slice(0,5),pages:i.filter(a.page).sort(function(t,n){return o.page(n)-o.page(t)}).slice(0,5),categories:t.filter(a.category).sort(function(t,n){return o.category(n)-o.category(t)}).slice(0,5),tags:n.filter(a.tag).sort(function(t,n){return o.tag(n)-o.tag(t)}).slice(0,5)}}function n(t){var n=$.makeArray(s.find(".searchbox-result-item")),e=-1;n.forEach(function(t,n){$(t).hasClass("active")&&(e=n)});var r,o=(n.length+e+t)%n.length;$(n[e]).removeClass("active"),$(n[o]).addClass("active"),0!==(r=$(n[o])).length&&(t=s[0].clientHeight,n=r.position().top-s.scrollTop(),(o=r[0].clientHeight+r.position().top)>t+s.scrollTop()&&s.scrollTop(o-s[0].clientHeight),n<0&&s.scrollTop(r.position().top))}function p(t){t&&t.length&&(location.href=t.attr("href"))}$.getJSON(t.contentUrl,function(n){"#insight-search"===location.hash.trim()&&e.addClass("show"),r.on("input",function(){var t=$(this).val();!function(t,n){for(var e in s.empty(),n)s.append(o(l(t),e.toUpperCase(),n[e]))}(t,h(n,t))}),r.trigger("input")});var g=!1;$(document).on("click focus",".navbar-main .search",function(){e.addClass("show"),e.find(".searchbox-input").focus()}).on("click touchend",".searchbox-result-item",function(t){"click"!==t.type&&!g||(p($(this)),g=!1)}).on("click touchend",".searchbox-close",function(t){"click"!==t.type&&!g||($(".navbar-main").css("pointer-events","none"),setTimeout(function(){$(".navbar-main").css("pointer-events","auto")},400),e.removeClass("show"),g=!1)}).on("keydown",function(t){if(e.hasClass("show"))switch(t.keyCode){case 27:e.removeClass("show");break;case 38:n(-1);break;case 40:n(1);break;case 13:p(s.find(".searchbox-result-item.active").eq(0))}}).on("touchstart",function(t){g=!0}).on("touchmove",function(t){g=!1})}
+/**
+ * Insight search plugin
+ * @author PPOffice { @link https://github.com/ppoffice }
+ */
+function loadInsight(config, translation) { // eslint-disable-line no-unused-vars
+    const $main = $('.searchbox');
+    const $input = $main.find('.searchbox-input');
+    const $container = $main.find('.searchbox-body');
+
+    function section(title) {
+        return $('<section>').addClass('searchbox-result-section').append($('<header>').text(title));
+    }
+
+    function merge(ranges) {
+        let last;
+        const result = [];
+
+        ranges.forEach(r => {
+            if (!last || r[0] > last[1]) {
+                result.push(last = r);
+            } else if (r[1] > last[1]) {
+                last[1] = r[1];
+            }
+        });
+
+        return result;
+    }
+
+    function findAndHighlight(text, matches, maxlen) {
+        if (!Array.isArray(matches) || !matches.length || !text) {
+            return maxlen ? text.slice(0, maxlen) : text;
+        }
+        const testText = text.toLowerCase();
+        const indices = matches.map(match => {
+            const index = testText.indexOf(match.toLowerCase());
+            if (!match || index === -1) {
+                return null;
+            }
+            return [index, index + match.length];
+        }).filter(match => {
+            return match !== null;
+        }).sort((a, b) => {
+            return a[0] - b[0] || a[1] - b[1];
+        });
+
+        if (!indices.length) {
+            return text;
+        }
+
+        let result = ''; let last = 0;
+        const ranges = merge(indices);
+        const sumRange = [ranges[0][0], ranges[ranges.length - 1][1]];
+        if (maxlen && maxlen < sumRange[1]) {
+            last = sumRange[0];
+        }
+
+        for (let i = 0; i < ranges.length; i++) {
+            const range = ranges[i];
+            result += text.slice(last, Math.min(range[0], sumRange[0] + maxlen));
+            if (maxlen && range[0] >= sumRange[0] + maxlen) {
+                break;
+            }
+            result += '<em>' + text.slice(range[0], range[1]) + '</em>';
+            last = range[1];
+            if (i === ranges.length - 1) {
+                if (maxlen) {
+                    result += text.slice(range[1], Math.min(text.length, sumRange[0] + maxlen + 1));
+                } else {
+                    result += text.slice(range[1]);
+                }
+            }
+        }
+
+        return result;
+    }
+
+    function searchItem(icon, title, slug, preview, url) {
+        title = title != null && title !== '' ? title : translation.untitled;
+
+        return `<a class="searchbox-result-item" href="${url}">
+            <span class="searchbox-result-icon">
+                <i class="fa fa-${icon}" />
+            </span>
+            <span class="searchbox-result-content">
+                <span class="searchbox-result-title">
+                    ${title}
+                    ${slug ? '<span class="searchbox-result-title-secondary">(' + slug + ')</span>' : ''}
+                </span>
+                ${preview ? '<span class="searchbox-result-preview">' + preview + '</span>' : ''}
+            </span>
+        </a>`;
+    }
+
+    function sectionFactory(keywords, type, array) {
+        let $searchItems;
+        if (array.length === 0) return null;
+        const sectionTitle = translation[type.toLowerCase()];
+        switch (type) {
+            case 'POSTS':
+            case 'PAGES':
+                $searchItems = array.map(item => {
+                    const title = findAndHighlight(item.title, keywords);
+                    const text = findAndHighlight(item.text, keywords, 100);
+                    return searchItem('file', title, null, text, item.link);
+                });
+                break;
+            case 'CATEGORIES':
+            case 'TAGS':
+                $searchItems = array.map(item => {
+                    const name = findAndHighlight(item.name, keywords);
+                    const slug = findAndHighlight(item.slug, keywords);
+                    return searchItem(type === 'CATEGORIES' ? 'folder' : 'tag', name, slug, null, item.link);
+                });
+                break;
+            default:
+                return null;
+        }
+        return section(sectionTitle).append($searchItems);
+    }
+
+    function parseKeywords(keywords) {
+        return keywords.split(' ').filter(keyword => {
+            return !!keyword;
+        }).map(keyword => {
+            return keyword.toLowerCase();
+        });
+    }
+
+    /**
+     * Judge if a given post/page/category/tag contains all of the keywords.
+     * @param Object            obj     Object to be weighted
+     * @param Array<String>     fields  Object's fields to find matches
+     */
+    function filter(keywords, obj, fields) {
+        const keywordArray = parseKeywords(keywords);
+        const containKeywords = keywordArray.filter(keyword => {
+            const containFields = fields.filter(field => {
+                if (!Object.prototype.hasOwnProperty.call(obj, field)) {
+                    return false;
+                }
+                if (obj[field].toLowerCase().indexOf(keyword) > -1) {
+                    return true;
+                }
+                return false;
+            });
+            if (containFields.length > 0) {
+                return true;
+            }
+            return false;
+        });
+        return containKeywords.length === keywordArray.length;
+    }
+
+    function filterFactory(keywords) {
+        return {
+            post: function(obj) {
+                return filter(keywords, obj, ['title', 'text']);
+            },
+            page: function(obj) {
+                return filter(keywords, obj, ['title', 'text']);
+            },
+            category: function(obj) {
+                return filter(keywords, obj, ['name', 'slug']);
+            },
+            tag: function(obj) {
+                return filter(keywords, obj, ['name', 'slug']);
+            }
+        };
+    }
+
+    /**
+     * Calculate the weight of a matched post/page/category/tag.
+     * @param Object            obj     Object to be weighted
+     * @param Array<String>     fields  Object's fields to find matches
+     * @param Array<Integer>    weights Weight of every field
+     */
+    function weight(keywords, obj, fields, weights) {
+        let value = 0;
+        parseKeywords(keywords).forEach(keyword => {
+            const pattern = new RegExp(keyword, 'img'); // Global, Multi-line, Case-insensitive
+            fields.forEach((field, index) => {
+                if (Object.prototype.hasOwnProperty.call(obj, field)) {
+                    const matches = obj[field].match(pattern);
+                    value += matches ? matches.length * weights[index] : 0;
+                }
+            });
+        });
+        return value;
+    }
+
+    function weightFactory(keywords) {
+        return {
+            post: function(obj) {
+                return weight(keywords, obj, ['title', 'text'], [3, 1]);
+            },
+            page: function(obj) {
+                return weight(keywords, obj, ['title', 'text'], [3, 1]);
+            },
+            category: function(obj) {
+                return weight(keywords, obj, ['name', 'slug'], [1, 1]);
+            },
+            tag: function(obj) {
+                return weight(keywords, obj, ['name', 'slug'], [1, 1]);
+            }
+        };
+    }
+
+    function search(json, keywords) {
+        const weights = weightFactory(keywords);
+        const filters = filterFactory(keywords);
+        const posts = json.posts;
+        const pages = json.pages;
+        const tags = json.tags;
+        const categories = json.categories;
+        return {
+            posts: posts.filter(filters.post).sort((a, b) => { return weights.post(b) - weights.post(a); }).slice(0, 5),
+            pages: pages.filter(filters.page).sort((a, b) => { return weights.page(b) - weights.page(a); }).slice(0, 5),
+            categories: categories.filter(filters.category).sort((a, b) => { return weights.category(b) - weights.category(a); }).slice(0, 5),
+            tags: tags.filter(filters.tag).sort((a, b) => { return weights.tag(b) - weights.tag(a); }).slice(0, 5)
+        };
+    }
+
+    function searchResultToDOM(keywords, searchResult) {
+        $container.empty();
+        for (const key in searchResult) {
+            $container.append(sectionFactory(parseKeywords(keywords),
+                key.toUpperCase(), searchResult[key]));
+        }
+    }
+
+    function scrollTo($item) {
+        if ($item.length === 0) return;
+        const wrapperHeight = $container[0].clientHeight;
+        const itemTop = $item.position().top - $container.scrollTop();
+        const itemBottom = $item[0].clientHeight + $item.position().top;
+        if (itemBottom > wrapperHeight + $container.scrollTop()) {
+            $container.scrollTop(itemBottom - $container[0].clientHeight);
+        }
+        if (itemTop < 0) {
+            $container.scrollTop($item.position().top);
+        }
+    }
+
+    function selectItemByDiff(value) {
+        const $items = $.makeArray($container.find('.searchbox-result-item'));
+        let prevPosition = -1;
+        $items.forEach((item, index) => {
+            if ($(item).hasClass('active')) {
+                prevPosition = index;
+
+            }
+        });
+        const nextPosition = ($items.length + prevPosition + value) % $items.length;
+        $($items[prevPosition]).removeClass('active');
+        $($items[nextPosition]).addClass('active');
+        scrollTo($($items[nextPosition]));
+    }
+
+    function gotoLink($item) {
+        if ($item && $item.length) {
+            location.href = $item.attr('href');
+        }
+    }
+
+    $.getJSON(config.contentUrl, json => {
+        if (location.hash.trim() === '#insight-search') {
+            $main.addClass('show');
+        }
+        $input.on('input', function() {
+            const keywords = $(this).val();
+            searchResultToDOM(keywords, search(json, keywords));
+        });
+        $input.trigger('input');
+    });
+
+    let touch = false;
+    $(document).on('click focus', '.navbar-main .search', () => {
+        $main.addClass('show');
+        $main.find('.searchbox-input').focus();
+    }).on('click touchend', '.searchbox-result-item', function(e) {
+        if (e.type !== 'click' && !touch) {
+            return;
+        }
+        gotoLink($(this));
+        touch = false;
+    }).on('click touchend', '.searchbox-close', e => {
+        if (e.type !== 'click' && !touch) {
+            return;
+        }
+        $('.navbar-main').css('pointer-events', 'none');
+        setTimeout(() => {
+            $('.navbar-main').css('pointer-events', 'auto');
+        }, 400);
+        $main.removeClass('show');
+        touch = false;
+    }).on('keydown', e => {
+        if (!$main.hasClass('show')) return;
+        switch (e.keyCode) {
+            case 27: // ESC
+                $main.removeClass('show'); break;
+            case 38: // UP
+                selectItemByDiff(-1); break;
+            case 40: // DOWN
+                selectItemByDiff(1); break;
+            case 13: // ENTER
+                gotoLink($container.find('.searchbox-result-item.active').eq(0)); break;
+        }
+    }).on('touchstart', e => {
+        touch = true;
+    }).on('touchmove', e => {
+        touch = false;
+    });
+}

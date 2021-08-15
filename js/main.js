@@ -209,7 +209,7 @@ function loadMathJax() { //加载mathjax
 $(document).ready(function () {
     loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
     console.info('%c CHKAOS %c - Find the calm in the chaos', 'background: #000; color: #fff; font-weight:900;font-size:24px','background: rgb(254,154,0); color: #000; font-weight:900;font-size:24px');
-    console.log(`联系方式vx：x1213149818\n`)
+    console.log(`联系方式vx：chkaos2020\n`)
     // 跨站脚本攻击提醒
     console.info("跨站脚本攻击提醒：如果您不清楚即将粘贴代码的作用，请勿继续操作！")
 });

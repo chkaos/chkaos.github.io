@@ -1,1 +1,127 @@
-"use strict";function _toConsumableArray(r){return _arrayWithoutHoles(r)||_iterableToArray(r)||_unsupportedIterableToArray(r)||_nonIterableSpread()}function _nonIterableSpread(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function _unsupportedIterableToArray(r,t){if(r){if("string"==typeof r)return _arrayLikeToArray(r,t);var e=Object.prototype.toString.call(r).slice(8,-1);return"Map"===(e="Object"===e&&r.constructor?r.constructor.name:e)||"Set"===e?Array.from(r):"Arguments"===e||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)?_arrayLikeToArray(r,t):void 0}}function _iterableToArray(r){if("undefined"!=typeof Symbol&&null!=r[Symbol.iterator]||null!=r["@@iterator"])return Array.from(r)}function _arrayWithoutHoles(r){if(Array.isArray(r))return _arrayLikeToArray(r)}function _arrayLikeToArray(r,t){(null==t||t>r.length)&&(t=r.length);for(var e=0,n=new Array(t);e<t;e++)n[e]=r[e];return n}var prevHeight=0;function initTocLinksScrollTop(r){return[].concat(_toConsumableArray(r)).map(function(r){return getAbsPosition(r).y})}var calcAnchorLink=function(r,t){for(var e=0;e<r.length;e++)if(Math.abs(t-r[e])<1.1)return e;return-1},isPassingThrough=function(r,t,e){return(r+1-e)*(t+1-e)<=0};function calcScrollIntoScreenIndex(r,t,e){var n=calcAnchorLink(r,e);if(0<=n)return n;for(var o=0;o<r.length;o++)if(isPassingThrough(e,t,r[o]))return t<e?o:o-1}function hideAllOl(r){[].concat(_toConsumableArray(r.querySelectorAll("ul"))).forEach(function(r){hideItem(r)})}function showOrHidden(r,t){var e=0;r.forEach(function(r){0<e&&(-1<r.innerText.indexOf(t.innerText)?showItem:hideItem)(r),e++})}function initFold(r){[].concat(_toConsumableArray(r.children)).forEach(function(r){hideAllOl(r)}),[].concat(_toConsumableArray(r.querySelectorAll(".is-current"))).forEach(function(r){r.classList.remove("is-current")})}function resetFold(r){initFold(r)}function hideItem(r){r.style.display="none"}function showItem(r){r.style.display=""}function getAbsPosition(r){for(var t=r.offsetLeft,e=r.offsetTop;r=r.offsetParent;)t+=r.offsetLeft,e+=r.offsetTop;return{x:t,y:e}}function loadToc(){var e,r=document.querySelector(".toc"),n=document.querySelectorAll(".toc"),o=document.querySelectorAll(".toc-item");o.length&&null!=r&&(initFold(r),e=initTocLinksScrollTop(document.querySelectorAll(".article-entry h1, h2, h3, h4, h5, h6")),document.addEventListener("scroll",function(){var r=$(document).scrollTop(),t=calcScrollIntoScreenIndex(e,prevHeight,r);prevHeight=r,void 0===t||(t=o[t])&&showOrHidden(n,t)}))}
+// 参考自 主题https://github.com/fi3ework/hexo-theme-archer
+var prevHeight = 0
+function initTocLinksScrollTop(tocLinks) {
+  return [...tocLinks].map(link => {
+    return getAbsPosition(link).y
+  })
+}
+
+var calcAnchorLink = (heights, currHeight) => {
+  for (let i = 0; i < heights.length; i++) {
+    if (Math.abs(currHeight - heights[i]) < 1.1) {
+      return i
+    }
+  }
+  return -1
+}
+
+var isPassingThrough = (currHeight, prevHeight, linkHeight) => {
+  return (currHeight + 1 - linkHeight) * (prevHeight + 1 - linkHeight) <= 0
+}
+
+function calcScrollIntoScreenIndex(heights, prevHeight, currHeight) {
+  var anchorLinkIndex = calcAnchorLink(heights, currHeight)
+  if (anchorLinkIndex >= 0) {
+    return anchorLinkIndex
+  }
+
+  for (let i = 0; i < heights.length; i++) {
+    if (isPassingThrough(currHeight, prevHeight, heights[i])) {
+      // if is scrolling down, select current
+      if (currHeight > prevHeight) {
+        return i
+      } else {
+        // if is scrolling up, select previous
+        return i - 1
+      }
+    }
+  }
+}
+
+// hide all ol
+function hideAllOl(root) {
+  ;[...root.querySelectorAll('ul')].forEach(li => {
+    hideItem(li)
+  })
+}
+
+function showOrHidden(tocs, cur) {
+  var i = 0;
+  tocs.forEach(ul => {
+    if (i > 0) {
+      if (ul.innerText.indexOf(cur.innerText) > -1) {
+        showItem(ul);
+      } else {
+        hideItem(ul);
+      }
+    }
+    i++;
+  })
+}
+
+// back to default state
+function initFold(toc) {
+  ;[...toc.children].forEach(child => {
+    hideAllOl(child)
+  })
+    ;[...toc.querySelectorAll('.is-current')].forEach(child => {
+      child.classList.remove('is-current')
+    })
+}
+
+function resetFold(toc) {
+  initFold(toc)
+}
+
+function hideItem(node) {
+  node.style.display = 'none'
+}
+
+function showItem(node) {
+  node.style.display = ''
+}
+
+function getAbsPosition(e) {
+  let x = e.offsetLeft,
+    y = e.offsetTop
+  while ((e = e.offsetParent)) {
+    x += e.offsetLeft
+    y += e.offsetTop
+  }
+  return {
+    x: x,
+    y: y
+  }
+}
+
+function loadToc() {
+  let toc = document.querySelector('.toc')
+  let tocs = document.querySelectorAll('.toc')
+  let tocItems = document.querySelectorAll('.toc-item')
+  if (!tocItems.length || toc == null) {
+    return
+  }
+  initFold(toc)
+  let headers = document.querySelectorAll(
+    '.article-entry h1, h2, h3, h4, h5, h6'
+  )
+  // get links height
+  let heights = initTocLinksScrollTop(headers)
+  document.addEventListener('scroll', () => {
+    let currHeight = $(document).scrollTop()
+    let currHeightIndex = calcScrollIntoScreenIndex(
+      heights,
+      prevHeight,
+      currHeight
+    )
+    prevHeight = currHeight
+    if (typeof currHeightIndex === 'undefined') {
+      return
+    }
+    let currItem = tocItems[currHeightIndex]
+    if (currItem) {
+      // show or hidden toc
+      showOrHidden(tocs, currItem);
+    }
+  })
+}

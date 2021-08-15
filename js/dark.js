@@ -1,1 +1,96 @@
-"use strict";!function(){function t(e){try{return localStorage.getItem(e)}catch(e){return null}}function n(){var e=getComputedStyle(c).getPropertyValue(a);return e.length?e.replace(/\"/g,"").trim():"dark"===e?"dark":"light"}function r(){c.removeAttribute(u),e(d)}function l(e){(e=e||t(d))!==n()&&m[e]?c.setAttribute(u,e):r()}function o(){var e=t(d);if(m[e])e=i[e];else{if(null!==e)return;e=i[n()]}return function(e,t){try{localStorage.setItem(e,t)}catch(e){}}(d,e),e}var c=document.documentElement,d="user-color-scheme",a="--color-mode",u="data-user-color-scheme",e=function(e){try{localStorage.removeItem(e)}catch(e){}},m={dark:!0,light:!0},i={dark:"light",light:"dark"};l(),window.onload=function(){var e=document.getElementById("btn-toggle-dark");e.addEventListener("click",function(){l(o())}),document.getElementById("hljs-dark-theme")&&e.addEventListener("click",function(){"dark"===n()?(document.getElementById("hljs-default-theme").media="none",document.getElementById("hljs-dark-theme").media="all"):(document.getElementById("hljs-dark-theme").media="none",document.getElementById("hljs-default-theme").media="all")})}}();
+(() => {
+  const rootElement = document.documentElement;
+  const darkModeStorageKey = "user-color-scheme";
+  const darkModeMediaQueryKey = "--color-mode";
+  const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+  const setLS = (k, v) => {
+      try {
+          localStorage.setItem(k, v);
+      } catch (e) {}
+  };
+
+  const removeLS = k => {
+      try {
+          localStorage.removeItem(k);
+      } catch (e) {}
+  };
+
+  const getLS = k => {
+      try {
+          return localStorage.getItem(k);
+      } catch (e) {
+          return null;
+      }
+  };
+
+  const getModeFromCSSMediaQuery = () => {
+      const res = getComputedStyle(rootElement).getPropertyValue(
+          darkModeMediaQueryKey
+      );
+      if (res.length) return res.replace(/\"/g, "").trim();
+      return res === "dark" ? "dark" : "light";
+  };
+
+  const resetRootDarkModeAttributeAndLS = () => {
+      rootElement.removeAttribute(rootElementDarkModeAttributeName);
+      removeLS(darkModeStorageKey);
+  };
+
+  const validColorModeKeys = {
+      dark: true,
+      light: true
+  };
+
+  const applyCustomDarkModeSettings = mode => {
+      const currentSetting = mode || getLS(darkModeStorageKey);
+
+      if (currentSetting === getModeFromCSSMediaQuery()) {
+          resetRootDarkModeAttributeAndLS();
+      } else if (validColorModeKeys[currentSetting]) {
+          rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+      } else {
+          resetRootDarkModeAttributeAndLS();
+      }
+  };
+
+  const invertDarkModeObj = {
+      dark: "light",
+      light: "dark"
+  };
+
+  const toggleCustomDarkMode = () => {
+      var currentSetting = getLS(darkModeStorageKey);
+
+      if (validColorModeKeys[currentSetting]) {
+          currentSetting = invertDarkModeObj[currentSetting];
+      } else if (currentSetting === null) {
+          currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+      } else {
+          return; 
+      }
+      setLS(darkModeStorageKey, currentSetting);
+
+      return currentSetting;
+  };
+
+  applyCustomDarkModeSettings();
+
+  window.onload = () => {
+      const darkModeToggleBottonElement = document.getElementById("btn-toggle-dark");
+      darkModeToggleBottonElement.addEventListener("click", () => {
+          applyCustomDarkModeSettings(toggleCustomDarkMode());
+      });
+      if (document.getElementById("hljs-dark-theme")) {
+          darkModeToggleBottonElement.addEventListener("click", () => {
+              if (getModeFromCSSMediaQuery() === 'dark') {
+                  document.getElementById("hljs-default-theme").media = 'none';
+                  document.getElementById("hljs-dark-theme").media = 'all';
+              } else {
+                  document.getElementById("hljs-dark-theme").media = 'none';
+                  document.getElementById("hljs-default-theme").media = 'all';
+              }
+          });
+      }
+  }
+})();
